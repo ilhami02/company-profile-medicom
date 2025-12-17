@@ -1,0 +1,39 @@
+name: Deploy ke VPS
+
+# Trigger: Jalan setiap ada push ke branch 'main'
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    # PENTING: Ini yang menyuruh agen VPS kamu yang kerja, bukan server GitHub
+    runs-on: self-hosted
+
+    steps:
+    # 1. Ambil kodingan terbaru dari GitHub
+    - name: Ambil Kodingan (Checkout)
+      uses: actions/checkout@v4
+
+    # 2. Pindahkan file ke folder web server (Rsync atau Copy)
+    # Sesuaikan path '/home/ilham/company-profile-medicom' dengan lokasi aslimu
+    - name: Update File Project
+      run: |
+        echo "Sedang menyalin file..."
+        rsync -av --exclude='.git' --exclude='.env' ./ /home/ilham/company-profile-medicom/
+
+    # 3. Update Dependency & Database (Opsional tapi disarankan)
+    - name: Update Dependency & Migrate
+      run: |
+        cd /home/ilham/company-profile-medicom
+        # Uncomment baris bawah jika kamu pakai Composer
+        # composer install --no-dev --optimize-autoloader
+        
+        # Jalankan migrasi database otomatis
+        php spark migrate --all
+
+    # 4. Bersihkan Cache CI4
+    - name: Clear Cache
+      run: |
+        cd /home/ilham/company-profile-medicom
+        php spark cache:clear
