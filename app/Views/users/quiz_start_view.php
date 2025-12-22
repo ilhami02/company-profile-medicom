@@ -38,10 +38,10 @@
 <div class="bg-main-gradient min-h-screen text-white flex flex-col items-center justify-center text-center px-4">
     <div class="animation-card w-full">
         <h2 class="text-2xl md:text-3xl font-semibold mb-4 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Selamat Datang di Quiz Kami!
         </h2>
         <p class="text-lg leading-snug">
-            Suspendisse semper dignissim bibendum. Sed venenatis volutpat eleifend.
+            Bersiaplah untuk menguji pengetahuan Anda. Quiz akan dimulai dalam beberapa detik.
         </p>
     </div>
 
