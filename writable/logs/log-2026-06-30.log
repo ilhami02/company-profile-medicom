@@ -238,3 +238,4 @@ Stack trace:
 #11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 #12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
 #13 {main}
+DEBUG - 2026-06-30 08:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
