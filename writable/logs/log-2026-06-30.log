@@ -1,0 +1,240 @@
+ERROR - 2026-06-30 06:51:23 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\rewrite.php(44): require_once('E:\\Kuliah\\Semes...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\rewrite.php(44): require_once('E:\\Kuliah\\Semes...')
+#13 {main}
+CRITICAL - 2026-06-30 06:51:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cms_hero`
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('E:\\Kuliah\\Semester 3\\Web 2\\uas_1\\company-profile-medicom\\public\\index.php')
+ERROR - 2026-06-30 06:51:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\rewrite.php(44): require_once('E:\\Kuliah\\Semes...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\rewrite.php(44): require_once('E:\\Kuliah\\Semes...')
+#13 {main}
+CRITICAL - 2026-06-30 06:51:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cms_hero`
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('E:\\Kuliah\\Semester 3\\Web 2\\uas_1\\company-profile-medicom\\public\\index.php')
+ERROR - 2026-06-30 06:53:28 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\rewrite.php(44): require_once('E:\\Kuliah\\Semes...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\rewrite.php(44): require_once('E:\\Kuliah\\Semes...')
+#13 {main}
+CRITICAL - 2026-06-30 06:53:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cms_hero`
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('E:\\Kuliah\\Semester 3\\Web 2\\uas_1\\company-profile-medicom\\public\\index.php')
+ERROR - 2026-06-30 06:53:45 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\rewrite.php(44): require_once('E:\\Kuliah\\Semes...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\rewrite.php(44): require_once('E:\\Kuliah\\Semes...')
+#13 {main}
+CRITICAL - 2026-06-30 06:53:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cms_hero`
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\MainUsers.php(31): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MainUsers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainUsers))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('E:\\Kuliah\\Semester 3\\Web 2\\uas_1\\company-profile-medicom\\public\\index.php')
+ERROR - 2026-06-30 07:41:26 --> mysqli_sql_exception: Table 'cms_users' already exists in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `c...', 0)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Database\Migrations\2025-01-01-000001_CreateCmsUsersTable.php(36): CodeIgniter\Database\Forge->createTable('cms_users', false, Array)
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateCmsUsersTable->up()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-06-30 07:52:26 --> mysqli_sql_exception: Table 'cms_users' already exists in E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `c...', 0)
+#1 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\app\Database\Migrations\2025-01-01-000001_CreateCmsUsersTable.php(36): CodeIgniter\Database\Forge->createTable('cms_users', false, Array)
+#5 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateCmsUsersTable->up()
+#6 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 E:\Kuliah\Semester 3\Web 2\uas_1\company-profile-medicom\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}

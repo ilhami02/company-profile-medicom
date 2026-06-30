@@ -1,1 +1,7 @@
 .env
+
+claude_plan.md
+dbms/
+dbms/*
+vendor/
+vendor/*

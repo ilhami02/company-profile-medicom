@@ -1,0 +1,205 @@
+CRITICAL - 2026-01-09 16:58:01 --> Error: Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/Database.php on line 143.
+ 1 SYSTEMPATH/Database/Database.php(61): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect()
+ 4 APPPATH/Controllers/MainUsers.php(19): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\MainUsers->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+CRITICAL - 2026-01-09 17:01:23 --> Error: Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/Database.php on line 143.
+ 1 SYSTEMPATH/Database/Database.php(61): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect()
+ 4 APPPATH/Controllers/MainUsers.php(19): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\MainUsers->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+ERROR - 2026-01-09 17:01:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' in /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/app/Controllers/MainUsers.php(27): CodeIgniter\BaseModel->first()
+#7 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#8 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/app/Controllers/MainUsers.php(27): CodeIgniter\BaseModel->first()
+#6 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/CodeIgniter.php(933): App\Controllers\MainUsers->index()
+#7 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#8 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#9 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 /media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2026-01-09 17:01:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 465.
+ 1 SYSTEMPATH/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/MainUsers.php(27): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\MainUsers->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+DEBUG - 2026-01-09 17:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-09 17:02:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: login]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/AuthController.php(16): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+DEBUG - 2026-01-09 17:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-09 17:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-09 17:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-09 17:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 17:04:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH/Controllers/Admin.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+DEBUG - 2026-01-09 17:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 17:04:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH/Controllers/Admin.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+DEBUG - 2026-01-09 17:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 17:05:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH/Controllers/Admin.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+DEBUG - 2026-01-09 17:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 17:05:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH/Controllers/Admin.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+DEBUG - 2026-01-09 17:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 17:06:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH/Controllers/Admin.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+DEBUG - 2026-01-09 17:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 17:06:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH/Controllers/Admin.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+DEBUG - 2026-01-09 17:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 17:06:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH/Controllers/Admin.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/media/ilham/Data/Kuliah/Semester 3/Web 2/uas_1/company-profile-medicom/public/index.php')
+DEBUG - 2026-01-09 10:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-09 10:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-09 10:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 10:19:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH\Controllers\Admin.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('E:\\Kuliah\\Semester 3\\Web 2\\uas_1\\company-profile-medicom\\public\\index.php')
+DEBUG - 2026-01-09 10:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 10:19:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH\Controllers\Admin.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('E:\\Kuliah\\Semester 3\\Web 2\\uas_1\\company-profile-medicom\\public\\index.php')
+DEBUG - 2026-01-09 10:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 10:19:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH\Controllers\Admin.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('E:\\Kuliah\\Semester 3\\Web 2\\uas_1\\company-profile-medicom\\public\\index.php')
+DEBUG - 2026-01-09 10:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 10:19:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH\Controllers\Admin.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('E:\\Kuliah\\Semester 3\\Web 2\\uas_1\\company-profile-medicom\\public\\index.php')
+DEBUG - 2026-01-09 10:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-01-09 10:19:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$divisionModel is deprecated in APPPATH\Controllers\Admin.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('E:\\Kuliah\\Semester 3\\Web 2\\uas_1\\company-profile-medicom\\public\\index.php')
