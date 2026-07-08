@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    # PENTING: Ini yang menyuruh agen VPS kamu yang kerja, bukan server GitHub
+    # PENTING: Menjalankan pada server VPS kamu (bukan server GitHub)
     runs-on: self-hosted
 
     steps:
@@ -15,19 +15,21 @@ jobs:
     - name: Ambil Kodingan (Checkout)
       uses: actions/checkout@v4
 
-    # 2. Pindahkan file ke folder web server (Rsync atau Copy)
-    # Sesuaikan path '/home/ilham/company-profile-medicom' dengan lokasi aslimu
+    # 2. Pindahkan file ke folder web server (Rsync)
     - name: Update File Project
       run: |
         echo "Sedang menyalin file..."
-        rsync -av --exclude='.git' --exclude='.env' ./ /home/ilham/company-profile-medicom/
+        # Flag --delete akan menghapus file di VPS jika file tersebut sudah dihapus di GitHub
+        # Folder writable/uploads dan writable/session dikecualikan agar data pengguna tidak hilang
+        rsync -av --delete --exclude='.git' --exclude='.env' --exclude='writable/uploads' --exclude='writable/session' ./ /home/github-runner/company-profile-medicom/
 
-    # 3. Update Dependency & Database (Opsional tapi disarankan)
+    # 3. Update Dependency & Database
     - name: Update Dependency & Migrate
       run: |
-        cd /home/ilham/company-profile-medicom
-        # Uncomment baris bawah jika kamu pakai Composer
-        # composer install --no-dev --optimize-autoloader
+        cd /home/github-runner/company-profile-medicom
+        
+        # Menginstal atau memperbarui library PHP sesuai composer.lock
+        composer install --no-dev --optimize-autoloader
         
         # Jalankan migrasi database otomatis
         php spark migrate --all
@@ -35,5 +37,12 @@ jobs:
     # 4. Bersihkan Cache CI4
     - name: Clear Cache
       run: |
-        cd /home/ilham/company-profile-medicom
+        cd /home/github-runner/company-profile-medicom
         php spark cache:clear
+
+    # 5. Fix Permissions untuk Web Server (Nginx)
+    - name: Set Folder Permissions
+      run: |
+        cd /home/github-runner/company-profile-medicom
+        # Pastikan folder writable bisa diakses penuh oleh Nginx untuk menyimpan log, cache, dan session
+        chmod -R 777 writable/
