@@ -21,12 +21,12 @@ jobs:
         echo "Sedang menyalin file..."
         # Flag --delete akan menghapus file di VPS jika file tersebut sudah dihapus di GitHub
         # Folder writable/uploads dan writable/session dikecualikan agar data pengguna tidak hilang
-        rsync -av --delete --exclude='.git' --exclude='.env' --exclude='writable/uploads' --exclude='writable/session' ./ /home/github-runner/company-profile-medicom/
+        rsync -av --delete --exclude='.git' --exclude='.env' --exclude='writable/uploads' --exclude='writable/session' ./ /home/github-runner/actions-runner/
 
     # 3. Update Dependency & Database
     - name: Update Dependency & Migrate
       run: |
-        cd /home/github-runner/company-profile-medicom
+        cd /home/github-runner/actions-runner
         
         # Menginstal atau memperbarui library PHP sesuai composer.lock
         composer install --no-dev --optimize-autoloader
@@ -37,12 +37,12 @@ jobs:
     # 4. Bersihkan Cache CI4
     - name: Clear Cache
       run: |
-        cd /home/github-runner/company-profile-medicom
+        cd /home/github-runner/actions-runner
         php spark cache:clear
 
     # 5. Fix Permissions untuk Web Server (Nginx)
     - name: Set Folder Permissions
       run: |
-        cd /home/github-runner/company-profile-medicom
+        cd /home/github-runner/actions-runner
         # Pastikan folder writable bisa diakses penuh oleh Nginx untuk menyimpan log, cache, dan session
         chmod -R 777 writable/
